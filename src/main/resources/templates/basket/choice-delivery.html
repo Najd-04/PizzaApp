@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/base}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+
+<body class="eni-page-background">
+<title layout:fragment="title">Livraison ou à emporter</title>
+<div layout:fragment="content">
+
+
+
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+        <h1 class="text-4xl font-bold text-teal-600 mb-6">Choisissez votre option de commande</h1>
+        <form action="/choisirLivraison" method="post" class="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
+            <label for="livraison" class="block text-lg font-semibold mb-2">Livraison ou À emporter :</label>
+            <select name="livraison" id="livraison" class="border border-gray-300 rounded-lg p-2 mb-4 w-full text-lg text-gray-800 bg-white">
+                <option value="true">Livraison</option>
+                <option value="false">À emporter</option>
+            </select>
+            <button type="submit" class="w-full bg-teal-600 text-white text-lg font-semibold px-4 py-2 rounded-lg hover:bg-teal-500 transition">
+                Valider
+            </button>
+        </form>
+    </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>
